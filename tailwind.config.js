@@ -3,6 +3,7 @@ module.exports = {
   content: [
     "./portfolio/**/*.{html,js}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {},
   },
