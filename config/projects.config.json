@@ -1,0 +1,25 @@
+{
+  "projects": [
+    {
+      "id": "iq-solver-pro-ai-resolver",
+      "name": "Polyomino Puzzle Solver",
+      "description": "Program which solves polyomino puzzles efficiently",
+      "github": {
+        "owner": "AntoinePerrin25",
+        "repo": "iq-solver-pro-ai-resolver",
+        "branch": "main",
+        "readme_path": "README.md"
+      },
+      "images": {
+        "light": "img/result_light.png",
+        "dark": "img/result_dark.png"
+      },
+      "tags": ["Python", "C", "AI", "Algorithms"]
+    }
+  ],
+  "settings": {
+    "image_path": "portfolio/img",
+    "projects_path": "portfolio/projects",
+    "markdown_path": "src/projects"
+  }
+}
