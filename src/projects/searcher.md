@@ -66,15 +66,7 @@ Options:
 
 ## Examples
 
-Search in a CSV file with headers:
-```bash
-search -ih data.csv -q "John" -col 1
-```
-
-Search with fuzzy matching:
-```bash
-search -ih users.csv -q "Smith" -c -t 1
-```
+![Light](../../portfolio/img/result_light.png)
 
 ## Navigation
 
@@ -96,9 +88,9 @@ When viewing results:
 ## TODO
 
 
-- [] Malloc entire file and point entries to file buffer instead of dynamically copying everything
-- [] Allow taking multiple files at once
-- [] Display source file if multiple files treated
+- [ ] Malloc entire file and point entries to file buffer instead of dynamically copying everything
+- [ ] Allow taking multiple files at once
+- [ ] Display source file if multiple files treated
 
 ## License
 
