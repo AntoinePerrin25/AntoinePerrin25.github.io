@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antoine Perrin - Portfolio - TITLE</title>
+    <link href="../styles/output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 min-h-screen flex flex-col">
+    <!-- Include Header -->
+    <div id="header"></div>
+
+    <!-- Main Content of Page -->
+    <main class="flex-grow flex justify-center items-center p-4">
+        <iframe 
+            src="./TITLEMD.html" 
+            class="w-[60%] h-[calc(100vh-16rem)] rounded-lg shadow-lg border-0 dark:border dark:border-gray-700"
+            title="Title"
+        ></iframe>
+    </main>
+
+    <!-- Include Footer -->
+    <div id="footer" class="mt-auto"></div>
+
+    <script>
+        // Load header and footer
+        fetch('../PageParts/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+
+        fetch('../PageParts/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
