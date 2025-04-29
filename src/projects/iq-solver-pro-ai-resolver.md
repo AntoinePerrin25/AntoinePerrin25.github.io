@@ -39,7 +39,7 @@ The interface allows you to:
 
 ## Examples
 
-![DarkImage](../../portfolio/img/puzzler_dark.png)
+![DarkImage](/img/puzzler_dark.png)
 
 ## Requirements
 - Python 3.8+
