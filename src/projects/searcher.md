@@ -66,7 +66,7 @@ Options:
 
 ## Examples
 
-![Light](../../portfolio/img/result_light.png)
+![Light](\img\result_light.png)
 
 ## Navigation
 
