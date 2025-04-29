@@ -55,7 +55,7 @@ This project is a simple Minecraft-like game written in C using the Raylib libra
 
 ## Screenshot
 
-![C_Minecraft](\img\c_minecraft.png)
+![C_Minecraft](/img/c_minecraft.png)
 
 ## Acknowledgements
 
