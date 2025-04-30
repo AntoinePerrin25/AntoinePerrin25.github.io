@@ -11,17 +11,20 @@
 <body class="bg-gray-100 dark:bg-gray-900 min-h-screen flex flex-col">
     <!-- Include Header -->
     <div id="header"></div>
-
+    
     <!-- Main Content of Page -->
-    <main class="flex-grow flex justify-center items-center p-4">
-        <video width="600" height="400" controls>
-            <source src="/img/turingvideo.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </source>
-        </video>
-    </main>
-    <main class="flex-grow flex justify-center items-center p-4">
-        <embed src="/img/Rapport_AP4B_Earth Wind and Fire.pdf" type="application/pdf" width="600" height="400" />
+    <main class="flex-grow flex flex-col items-center p-4">
+        <div class="mb-8">
+            <h2 class="text-2xl font-bold mb-4 text-center">Video explaining the project</h2>
+            <video width="600" height="400" controls>
+                <source src="/img/turingvideo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div>
+            <h2 class="text-2xl font-bold mb-4 text-center">Project Report</h2>
+            <embed src="/img/Rapport_AP4B_Earth Wind and Fire.pdf" type="application/pdf" width="600" height="400" />
+        </div>
     </main>
 
     <!-- Include Footer -->
