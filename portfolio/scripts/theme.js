@@ -1,33 +1,36 @@
-// Check initial theme
-if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    document.documentElement.classList.add('dark');
-}
-
-// Update icon visibility based on current theme
 function updateThemeIcons() {
-    const darkIcon = document.getElementById('theme-toggle-dark-icon');
-    const lightIcon = document.getElementById('theme-toggle-light-icon');
+    const moonIcon = document.querySelector('[data-icon="moon"]');
+    const sunIcon = document.querySelector('[data-icon="sun"]');
     
+    if (!moonIcon || !sunIcon) return;
+
     if (document.documentElement.classList.contains('dark')) {
-        darkIcon.style.display = 'none';
-        lightIcon.style.display = 'block';
+        moonIcon.style.display = 'none';
+        sunIcon.style.display = 'block';
     } else {
-        darkIcon.style.display = 'block';
-        lightIcon.style.display = 'none';
+        moonIcon.style.display = 'block';
+        sunIcon.style.display = 'none';
     }
 }
 
-// Initial icon update
-updateThemeIcons();
-
-// Theme toggle click handler
-document.getElementById('theme-toggle').addEventListener('click', function() {
-    if (document.documentElement.classList.contains('dark')) {
-        document.documentElement.classList.remove('dark');
-        localStorage.setItem('color-theme', 'light');
-    } else {
+function initializeTheme() {
+    // Check for saved theme preference or use system preference
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
         document.documentElement.classList.add('dark');
-        localStorage.setItem('color-theme', 'dark');
+    } else {
+        document.documentElement.classList.remove('dark');
     }
+
+    // Initialize theme icons
     updateThemeIcons();
-});
+
+    // Add click event listener to theme toggle button
+    const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+            updateThemeIcons();
+        });
+    }
+}
